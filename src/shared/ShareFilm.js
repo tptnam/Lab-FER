@@ -1,6 +1,6 @@
 export const listFilms = [
     {
-        id: 1,
+        id: '1',
         Image: "assets/images/spiderman.jpg",
         Title: "Spider-Man: No Way Home",
         Year: "2021",

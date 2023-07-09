@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useContext } from "react";
 import { ThemeContext } from "./themcontext"
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
     const { theme, dark, toggle } = useContext(ThemeContext)
@@ -14,18 +15,18 @@ export default function Navigation() {
 
                     }}>
                     <li>
-                        <a className="active" href="#home" style={{ color: theme.color }} >
+                        <Link className="active" to="/" style={{ color: theme.color }} >
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#news" style={{ color: theme.color }}>News</a>
+                        <Link to="/idk" style={{ color: theme.color }}>News</Link>
                     </li>
                     <li>
-                        <a href="#about" style={{ color: theme.color }}>About</a>
+                        <Link to="/idk" style={{ color: theme.color }}>About</Link>
                     </li>
                     <li>
-                        <a href="#contact" style={{ color: theme.color }}>Contact</a>
+                        <Link to="/contact" style={{ color: theme.color }}>Contact</Link>
                     </li>
                     <li>
                         <a
@@ -38,8 +39,8 @@ export default function Navigation() {
                     </li>
                 </ul>
             </nav>
-
         </div >
+
     );
 
 }

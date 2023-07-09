@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { listFilms } from '../shared/ShareFilm'
-import { useState } from 'react';
+import { Link } from 'react-router-dom'
+
 
 
 function Film() {
-    const [film, setFilm] = useState([])
+
+
 
     return (
         <div className="container">
@@ -14,16 +16,24 @@ function Film() {
                         <img src={Film.Image} alt="daylahinhanh=))" style={{ width: "100%", height: 600 }} />
                         <h3>{Film.Title}</h3>
                         <p className="title">Publisher: {Film.Year} Nation: {Film.Nation}</p>
-                        <p>
+                        {/* <p>
                             <button>
                                 <a href="#popup1" id="openPopUp" onClick={() => setFilm(Film)} > Detail </a>
+                            </button>
+                        </p> */}
+                        <p>
+                            <button >
+                                <Link to={`/FilmDetail/${Film.id}`}>
+                                    Detail
+                                </Link>
                             </button>
                         </p>
                     </div>
                 </div>
 
-            ))}
-
+            ))
+            }
+            {/* 
             <div id="popup1" className="overlay">
                 <div className="popup">
                     <a className="close" href="#">&times;</a>
@@ -32,8 +42,8 @@ function Film() {
 
                     <div className="content">{film.Info}</div>
                 </div>
-            </div>
-        </div>
+            </div> */}
+        </div >
     );
 }
 
