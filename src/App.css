@@ -56,6 +56,10 @@ li a {
 }
 
 .footer p {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: gray;
     text-align: center;
     padding: 0.4%;
