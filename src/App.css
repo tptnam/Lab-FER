@@ -25,10 +25,7 @@ img {
 
 .ulnav {
     display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    background-color: grey;
-    margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 li {
@@ -56,7 +53,10 @@ li a {
 }
 
 .footer p {
-    background-color: gray;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     padding: 0.4%;
 }
@@ -116,4 +116,14 @@ li a {
 .popup .content {
     max-height: 30%;
     overflow: auto;
+}
+
+.link {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.NavBar {
+    margin-bottom: 2%;
 }
